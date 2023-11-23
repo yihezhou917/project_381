@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Employees</title>
+</head>
+<body>
+  <h1>All Employees</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Position</th>
+        <th>Salary</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (let employee of employees) { %>
+        <tr>
+          <td><%= employee.employeeId %></td>
+          <td><%= employee.name %></td>
+          <td><%= employee.department %></td>
+          <td><%= employee.position %></td>
+          <td><%= employee.salary %></td>
+          <td><%= employee.phoneNumber %></td>
+          <td>
+            <a href="/employees/<%= employee._id %>">View</a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
